@@ -155,6 +155,23 @@ cv2.imshow('yuv image',yuv)
 cv2.waitKey(0)
 
 output:
+
+
 ![p5](https://user-images.githubusercontent.com/72303060/104437750-31ed2a00-55b5-11eb-97f1-898cc79ed738.png)
 ![p5b](https://user-images.githubusercontent.com/72303060/104437774-374a7480-55b5-11eb-8953-889854a0f509.png)
+
+6.	Develop a program to create an image from 2D array (generate an array of random size).
+Numpy or Numeric python is a popular library for array manipulation since images are just an array of pixels carrying various color codes.Numpy can be used to convert an array to image.Every array can't be converted into an image because each pixel of an image consists of specific color codes and if the given array is not in a suitable format the libraries wont be able to process it properly
+code:
+import numpy, cv2
+img = numpy.zeros([200,200,3])
+img[:,:,0] = numpy.ones([200,200])*255
+img[:,:,1] = numpy.ones([200,200])*255
+img[:,:,2] = numpy.ones([200,200])*0
+cv2.imwrite('color_img.jpg', img)
+cv2.imshow('Color image', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
 
