@@ -179,3 +179,44 @@ output:
 ![p6](https://user-images.githubusercontent.com/72303060/104438913-8ba22400-55b6-11eb-941d-9da6aff8cf9d.png)
 
 
+##Write a program to find the sum of neighbour values in a matrix.
+The adjacent elements of matrix can be top, down, left, right, diagonal or anti diagonal. The four or more numbers should be adjacent to each other.
+8-connected pixels are neighbors to every pixel that touches one of their edges or corners. These pixels are connected horizontally, vertically, and diagonally. In addition to 4-connected pixels, each pixel with coordinates {\displaystyle \textstyle (x\pm 1,y\pm 1)}\textstyle(x\pm1,y\pm1) is connected to the pixel at {\displaystyle \textstyle (x,y)}\textstyle(x,y).
+all the adjacent elements are added to get sum of the neighbour values in a matrix except itself.
+functions:
+np.asarray()-Convert the input to an array. Input data, in any form that can be converted to an array. This includes lists, lists of tuples, tuples, tuples of tuples, tuples of lists and ndarrays.
+np.zeros()-Python numpy. zeros() function returns a new array of given shape and type, where the element's value as 0.
+shape()-The function "shape" returns the shape of an array. The shape is a tuple of integers. These numbers denote the lengths of the corresponding array dimension.
+code:
+import numpy as np
+M = [[1, 4, 3],
+    [9, 8, 6],
+    [5, 2, 7]] 
+M = np.asarray(M)
+N = np.zeros(M.shape)
+def sumNeighbors(M,x,y):
+    l = []
+    for i in range(max(0,x-1),x+2): 
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: 
+                pass
+    return sum(l)-M[x][y] 
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+print ("Original matrix:\n", M)
+print ("Summed neighbors matrix:\n", N)
+
+output:
+
+Original matrix:
+ [[1 4 3]
+ [9 8 6]
+ [5 2 7]]
+Summed neighbors matrix:
+ [[21. 27. 18.]
+ [20. 37. 24.]
+ [19. 35. 16.]]
