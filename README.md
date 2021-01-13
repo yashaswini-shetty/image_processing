@@ -24,7 +24,7 @@ cv2.waitKey()
 output:
 ![p1](https://user-images.githubusercontent.com/72303060/104428017-f13be380-55a9-11eb-860b-6a90adaf6008.png)
 
-2.	Develop a program to perform linear transformations on an image: Scaling and Rotation 
+## 2.	Develop a program to perform linear transformations on an image: Scaling and Rotation 
 Scaling is just resizing of the image. OpenCV comes with a function cv.resize() for this purpose. The size of the image can be specified manually, or you can specify the scaling factor. Different interpolation methods are used. Preferable interpolation methods are cv.INTER_AREA for shrinking and cv.INTER_CUBIC (slow) & cv.INTER_LINEAR for zooming. By default, the interpolation method cv.INTER_LINEAR is used for all resizing purposes.
 
 Images can be rotated to any degree clockwise or otherwise. We just need to define rotation matrix listing rotation point, degree of rotation and the scaling factor.
@@ -59,7 +59,7 @@ output:
 1.![p2](https://user-images.githubusercontent.com/72303060/104431007-6c52c900-55ad-11eb-8b32-ed7dc59e17d2.png)
 2.![p1b](https://user-images.githubusercontent.com/72303060/104433714-6dd1c080-55b0-11eb-8f40-c9eddd68cf15.png)
 
-3.	Develop a program to find the sum and mean of a set of images. 
+## 3.	Develop a program to find the sum and mean of a set of images. 
   a.	Create ‘n’ number of images and read them from the directory and perform the operations.
   you can use os.listdir() to get the names of all images in your specified path . Then you can loop over the names of images
    processing a multiple image consists of-
@@ -98,7 +98,7 @@ for sum_img in imgs:
  ![p3](https://user-images.githubusercontent.com/72303060/104434149-e769ae80-55b0-11eb-80b8-29fa4af344e5.png)
 
 
-4.	Develop a program to convert the color image to gray scale and binary image.
+## 4.	Develop a program to convert the color image to gray scale and binary image.
 Images are composed of Pixels and in Binary image every pixel value is either 0 or 1 i.e either black or white. it is called bi-level or two level image
 while in gray scale ; image can have any value between 0 to 255 for 8-bit color(every pixel is represented by 8 bits) i.e it can have transition between pure black or pure white . It only have intensity value.
 So, Gray Scale image can have shades of grey varying between Black and white while Binary image can either of two extreme for a pixel value either white or black
@@ -123,7 +123,7 @@ cv2.waitKey(0)
 output:
 ![p4](https://user-images.githubusercontent.com/72303060/104435844-dde14600-55b2-11eb-80cf-5c65c761f271.png)
 
-5.	Develop a program to convert the given color image to different color spaces. 
+## 5.	Develop a program to convert the given color image to different color spaces. 
 Color spaces are different types of color modes, used in image processing and signals and system for various purposes. Some of the common color spaces are:
 RGB 
 In the RGB model, each color appears in its primary components of red, green and blue.
@@ -160,7 +160,7 @@ output:
 ![p5](https://user-images.githubusercontent.com/72303060/104437750-31ed2a00-55b5-11eb-97f1-898cc79ed738.png)
 ![p5b](https://user-images.githubusercontent.com/72303060/104437774-374a7480-55b5-11eb-8953-889854a0f509.png)
 
-6.	Develop a program to create an image from 2D array (generate an array of random size).
+## 6.	Develop a program to create an image from 2D array (generate an array of random size).
 Numpy or Numeric python is a popular library for array manipulation since images are just an array of pixels carrying various color codes.Numpy can be used to convert an array to image.Every array can't be converted into an image because each pixel of an image consists of specific color codes and if the given array is not in a suitable format the libraries wont be able to process it properly
 code:
 import numpy, cv2
