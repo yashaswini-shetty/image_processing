@@ -54,6 +54,7 @@ cv2.waitKey()
 output:
 1.![p2](https://user-images.githubusercontent.com/72303060/104431007-6c52c900-55ad-11eb-8b32-ed7dc59e17d2.png)
 2.![p1b](https://user-images.githubusercontent.com/72303060/104433714-6dd1c080-55b0-11eb-8f40-c9eddd68cf15.png)
+
 3.	Develop a program to find the sum and mean of a set of images. 
   a.	Create ‘n’ number of images and read them from the directory and perform the operations.
   you can use os.listdir() to get the names of all images in your specified path . Then you can loop over the names of images
