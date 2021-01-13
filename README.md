@@ -173,5 +173,7 @@ cv2.imshow('Color image', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+output:
+![p6](https://user-images.githubusercontent.com/72303060/104438913-8ba22400-55b6-11eb-941d-9da6aff8cf9d.png)
 
 
