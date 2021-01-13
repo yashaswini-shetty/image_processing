@@ -140,7 +140,7 @@ cv2.cvtColor() method is used to convert an image from one color space to anothe
 
 code:
 import cv2  
-image = cv2.imread('blue2.jpg')
+image = cv2.imread('dog.jpg')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 hsl=cv2.cvtColor(image,cv2.COLOR_BGR2HLS)
 hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
