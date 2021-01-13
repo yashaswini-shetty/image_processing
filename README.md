@@ -20,7 +20,7 @@ cv2.imshow('imagecolor1',imggry)
 cv2.imwrite('grayimg.jpg',imggry)
 cv2.waitKey()
 
-
+![p1](https://user-images.githubusercontent.com/72303060/104428017-f13be380-55a9-11eb-860b-6a90adaf6008.png)
 
 
 
