@@ -58,8 +58,10 @@ output:
   you can use os.listdir() to get the names of all images in your specified path . Then you can loop over the names of images
    processing a multiple image consists of-
     1.Having the images in a directory e.g. foo/
-  2.Getting the list of all images in the foo/ directory.
-  3.Loop over the list of images.
+    2.Getting the list of all images in the foo/ directory.
+    3.Loop over the list of images.
+    mean:'mean' value gives the contribution of individual pixel intensity for the entire image & variance is normally used to find how each pixel varies from the neighbouring pixel (or centre pixel) and is used in classify into different regions.
+    sum:adds the value of each pixel in one of the input images with the corresponding pixel in the other input image and returns the sum in the corresponding pixel of the output image. 
   functions:
   listdir() method in python is used to get the list of all files and directories in the specified directory. If we don't specify any directory, then list of files and directories in the current working directory will be returned
 code:
