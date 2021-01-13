@@ -19,6 +19,8 @@ cv2.imshow('imagecolor',imgclr)
 cv2.imshow('imagecolor1',imggry)
 cv2.imwrite('grayimg.jpg',imggry)
 cv2.waitKey()
+
+
 output:
 ![p1](https://user-images.githubusercontent.com/72303060/104428017-f13be380-55a9-11eb-860b-6a90adaf6008.png)
 
@@ -29,11 +31,11 @@ Images can be rotated to any degree clockwise or otherwise. We just need to defi
 
 functions:
 1.To resize an image in Python, you can use cv2.resize() function of OpenCV library cv2.
-2.cv.getRotationMatrix2D(	center, angle, scale	)=Calculates an affine matrix of 2D rotation.
+2.cv2.getRotationMatrix2D(	center, angle, scale	)=Calculates an affine matrix of 2D rotation.
   -center	Center of the rotation in the source image.
   -angle	Rotation angle in degrees. Positive values mean counter-clockwise rotation (the coordinate origin is assumed to be the top-left corner).
   -scale	Isotropic scale factor.
-3.cv.warpAffine()Applies an affine transformation to an image.
+3.cv2.warpAffine()Applies an affine transformation to an image.
 code:
 #SCALING
 import cv2 
@@ -51,6 +53,8 @@ res = cv2.warpAffine(imgclr, M, (col,row))
 cv2.imshow('imagecolor',imgclr)
 cv2.imshow('imagecolor1',res)
 cv2.waitKey()
+
+
 output:
 1.![p2](https://user-images.githubusercontent.com/72303060/104431007-6c52c900-55ad-11eb-8b32-ed7dc59e17d2.png)
 2.![p1b](https://user-images.githubusercontent.com/72303060/104433714-6dd1c080-55b0-11eb-8f40-c9eddd68cf15.png)
@@ -88,9 +92,35 @@ for sum_img in imgs:
     print(mean)
     cv2.waitKey()
     cv2.destroyAllWindows()
+    
+    
  output:
  ![p3](https://user-images.githubusercontent.com/72303060/104434149-e769ae80-55b0-11eb-80b8-29fa4af344e5.png)
 
+
+4.	Develop a program to convert the color image to gray scale and binary image.
+Images are composed of Pixels and in Binary image every pixel value is either 0 or 1 i.e either black or white. it is called bi-level or two level image
+while in gray scale ; image can have any value between 0 to 255 for 8-bit color(every pixel is represented by 8 bits) i.e it can have transition between pure black or pure white . It only have intensity value.
+So, Gray Scale image can have shades of grey varying between Black and white while Binary image can either of two extreme for a pixel value either white or black
+Converting an image to black and white with OpenCV can be done with a simple binary thresholding operation.
+Converting an image to black and white involves two steps.
+  1.Read the source image as grey scale image.
+  2.Convert the grey scale image to binary with a threshold of your choice
+  functions:
+  1.cv2.cvtColor() method is used to convert an image from one color space to another. 
+  2.cv2.threshold is used to apply the thresholding. The first argument is the source image, which should be a grayscale image. The second argument is the threshold value which is used to classify the pixel values. The third argument is the maximum value which is assigned to pixel values exceeding the threshold.
+  code:
+  import cv2  
+image = cv2.imread('blue1.jpg')
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+ret, bw_img = cv2.threshold(gray,127,255,cv2.THRESH_BINARY) 
+cv2.imshow('Original image',image)
+cv2.imshow('Gray image', gray)
+cv2.imshow("Binary Image",bw_img)
+cv2.waitKey(0)
+
+
+output:
 
 
 
