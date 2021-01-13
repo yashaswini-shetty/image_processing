@@ -178,8 +178,7 @@ output:
 
 ![p6](https://user-images.githubusercontent.com/72303060/104438913-8ba22400-55b6-11eb-941d-9da6aff8cf9d.png)
 
-
-##Write a program to find the sum of neighbour values in a matrix.
+## 7.Write a program to find the sum of neighbour values in a matrix.
 The adjacent elements of matrix can be top, down, left, right, diagonal or anti diagonal. The four or more numbers should be adjacent to each other.
 8-connected pixels are neighbors to every pixel that touches one of their edges or corners. These pixels are connected horizontally, vertically, and diagonally. In addition to 4-connected pixels, each pixel with coordinates {\displaystyle \textstyle (x\pm 1,y\pm 1)}\textstyle(x\pm1,y\pm1) is connected to the pixel at {\displaystyle \textstyle (x,y)}\textstyle(x,y).
 all the adjacent elements are added to get sum of the neighbour values in a matrix except itself.
