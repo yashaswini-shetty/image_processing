@@ -121,6 +121,39 @@ cv2.waitKey(0)
 
 
 output:
+![p4](https://user-images.githubusercontent.com/72303060/104435844-dde14600-55b2-11eb-80cf-5c65c761f271.png)
 
+5.	Develop a program to convert the given color image to different color spaces. 
+Color spaces are different types of color modes, used in image processing and signals and system for various purposes. Some of the common color spaces are:
+RGB 
+In the RGB model, each color appears in its primary components of red, green and blue.
+GRAY
+Gray level images use a single value per pixel that is called intensity or brightness
+HSL
+HSL stands for hue, saturation, and lightness.
+HSV
+The HSV (Hue, Saturation, Value) model, also known as HSB (Hue, Saturation, Brightness), defines a color space in terms of three constituent components
+YUV 
+The YUV color model is the basic color model used in analogue color TV broadcasting. 
+functions:
+cv2.cvtColor() method is used to convert an image from one color space to another. 
+
+code:
+import cv2  
+image = cv2.imread('blue2.jpg')
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+hsl=cv2.cvtColor(image,cv2.COLOR_BGR2HLS)
+hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
+yuv=cv2.cvtColor(image,cv2.COLOR_BGR2YUV)
+
+cv2.imshow('Original image',image)
+cv2.imshow('gray image',gray)
+cv2.imshow('hsl image',hsl)
+cv2.imshow('hsv image',hsv)
+cv2.imshow('yuv image',yuv)
+
+cv2.waitKey(0)
+
+output:
 
 
