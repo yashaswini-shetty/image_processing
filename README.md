@@ -53,6 +53,38 @@ cv2.imshow('imagecolor1',res)
 cv2.waitKey()
 output:
 ![p2](https://user-images.githubusercontent.com/72303060/104431007-6c52c900-55ad-11eb-8b32-ed7dc59e17d2.png)
+3.	Develop a program to find the sum and mean of a set of images. 
+  a.	Create ‘n’ number of images and read them from the directory and perform the operations.
+  you can use os.listdir() to get the names of all images in your specified path . Then you can loop over the names of images
+   processing a multiple image consists of-
+    1.Having the images in a directory e.g. foo/
+  2.Getting the list of all images in the foo/ directory.
+  3.Loop over the list of images.
+  functions:
+  listdir() method in python is used to get the list of all files and directories in the specified directory. If we don't specify any directory, then list of files and directories in the current working directory will be returned
+code:
+import cv2
+import os
+path='D:\imageip'
+imgs=[]
+dirs = os.listdir(path)
+for file in dirs :
+    fpat=path+"\\"+file
+    imgs.append(cv2.imread(fpat))
+i=0
+sum_img=[]
+for sum_img in imgs:
+    read_img=imgs[i]
+    sum_img=sum_img+read_img
+    i = i +1
+    cv2.imshow('sum',sum_img)
+    print(sum_img)
+    cv2.imshow('mean',sum_img/i)
+    mean=(sum_img/i)
+    print(mean)
+    cv2.waitKey()
+    cv2.destroyAllWindows()
+  
 
 
 
