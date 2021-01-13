@@ -1,5 +1,5 @@
 # image_processing
-1.	Develop a program to display grayscale image using read and write operation.
+## 1.	Develop a program to display grayscale image using read and write operation.
 Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
 
 Importance of grayscaling –
