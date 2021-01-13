@@ -155,5 +155,6 @@ cv2.imshow('yuv image',yuv)
 cv2.waitKey(0)
 
 output:
-
+![p5](https://user-images.githubusercontent.com/72303060/104437750-31ed2a00-55b5-11eb-97f1-898cc79ed738.png)
+![p5b](https://user-images.githubusercontent.com/72303060/104437774-374a7480-55b5-11eb-8953-889854a0f509.png)
 
