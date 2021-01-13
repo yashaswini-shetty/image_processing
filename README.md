@@ -88,7 +88,9 @@ for sum_img in imgs:
     print(mean)
     cv2.waitKey()
     cv2.destroyAllWindows()
-  
+ output:
+ ![p3](https://user-images.githubusercontent.com/72303060/104434149-e769ae80-55b0-11eb-80b8-29fa4af344e5.png)
+
 
 
 
