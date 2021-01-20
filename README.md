@@ -38,7 +38,7 @@ functions:
   -scale	Isotropic scale factor.
 3.cv2.warpAffine()Applies an affine transformation to an image.
 code:
-#SCALING
+```python#SCALING
 import cv2 
 imgclr=cv2.imread("imgred.jpg") 
 res = cv2.resize(imgclr,(300,300),interpolation=cv2.INTER_CUBIC) 
@@ -54,7 +54,7 @@ res = cv2.warpAffine(imgclr, M, (col,row))
 cv2.imshow('imagecolor',imgclr)
 cv2.imshow('imagecolor1',res)
 cv2.waitKey()
-
+```
 
 output:
 1.![p2](https://user-images.githubusercontent.com/72303060/104431007-6c52c900-55ad-11eb-8b32-ed7dc59e17d2.png)
@@ -72,6 +72,7 @@ output:
   functions:
   listdir() method in python is used to get the list of all files and directories in the specified directory. If we don't specify any directory, then list of files and directories in the current working directory will be returned
 code:
+```python
 import cv2
 import os
 path='D:\imageip'
@@ -94,7 +95,7 @@ for sum_img in imgs:
     cv2.waitKey()
     cv2.destroyAllWindows()
     
-    
+```    
  output:
  ![p3](https://user-images.githubusercontent.com/72303060/104434149-e769ae80-55b0-11eb-80b8-29fa4af344e5.png)
 
@@ -111,6 +112,7 @@ Converting an image to black and white involves two steps.
   1.cv2.cvtColor() method is used to convert an image from one color space to another. 
   2.cv2.threshold is used to apply the thresholding. The first argument is the source image, which should be a grayscale image. The second argument is the threshold value which is used to classify the pixel values. The third argument is the maximum value which is assigned to pixel values exceeding the threshold.
   code:
+  ```python
   import cv2  
 image = cv2.imread('blue1.jpg')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -119,7 +121,7 @@ cv2.imshow('Original image',image)
 cv2.imshow('Gray image', gray)
 cv2.imshow("Binary Image",bw_img)
 cv2.waitKey(0)
-
+```
 
 output:
 ![p4](https://user-images.githubusercontent.com/72303060/104435844-dde14600-55b2-11eb-80cf-5c65c761f271.png)
@@ -140,6 +142,7 @@ functions:
 cv2.cvtColor() method is used to convert an image from one color space to another. 
 
 code:
+```python
 import cv2  
 image = cv2.imread('dog.jpg')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -154,7 +157,7 @@ cv2.imshow('hsv image',hsv)
 cv2.imshow('yuv image',yuv)
 
 cv2.waitKey(0)
-
+```
 output:
 
 
@@ -164,6 +167,7 @@ output:
 ## 6.	Develop a program to create an image from 2D array (generate an array of random size).
 Numpy or Numeric python is a popular library for array manipulation since images are just an array of pixels carrying various color codes.Numpy can be used to convert an array to image.Every array can't be converted into an image because each pixel of an image consists of specific color codes and if the given array is not in a suitable format the libraries wont be able to process it properly
 code:
+```python
 import numpy, cv2
 img = numpy.zeros([200,200,3])
 img[:,:,0] = numpy.ones([200,200])*255
@@ -173,7 +177,7 @@ cv2.imwrite('color_img.jpg', img)
 cv2.imshow('Color image', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 output:
 
 
@@ -188,6 +192,7 @@ np.asarray()-Convert the input to an array. Input data, in any form that can be 
 np.zeros()-Python numpy. zeros() function returns a new array of given shape and type, where the element's value as 0.
 shape()-The function "shape" returns the shape of an array. The shape is a tuple of integers. These numbers denote the lengths of the corresponding array dimension.
 code:
+```python
 import numpy as np
 M = [[1, 4, 3],
     [9, 8, 6],
@@ -209,7 +214,7 @@ for i in range(M.shape[0]):
         N[i][j] = sumNeighbors(M, i, j)
 print ("Original matrix:\n", M)
 print ("Summed neighbors matrix:\n", N)
-
+```
 output:
 
 Original matrix:
@@ -243,6 +248,7 @@ Return_Type classname :: operator *(Argument list)
 }
 
 code:
+```c++
 #include <iostream>
 using namespace std;
 class matrix
@@ -355,7 +361,7 @@ int main()
 	p * q;
 return 0;
 }
-
+```
 output:
 Enter the row and column size for the  matrix
 2
