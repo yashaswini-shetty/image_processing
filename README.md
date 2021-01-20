@@ -216,7 +216,7 @@ print ("Original matrix:\n", M)
 print ("Summed neighbors matrix:\n", N)
 ```
 output:
-
+```
 Original matrix:
  [[1 4 3]
  [9 8 6]
@@ -225,7 +225,7 @@ Summed neighbors matrix:
  [[21. 27. 18.]
  [20. 37. 24.]
  [19. 35. 16.]]
-
+```
 ## 7.Write a C++ program to perform operator overloading.
 In C++, we can make operators to work for user defined classes. This means C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading.
 For example, we can overload an operator ‘+’ in a class like String so that we can concatenate two strings by just using +.
@@ -363,6 +363,7 @@ return 0;
 }
 ```
 output:
+```
 Enter the row and column size for the  matrix
 2
 2
@@ -388,3 +389,4 @@ subtraction is
 mul is
  10     5
  20     10
+```
