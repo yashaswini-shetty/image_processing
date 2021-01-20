@@ -11,6 +11,7 @@ functions:
 2.the function imwrite() is used to write an image in memory to disk and
 3.the function imshow() in conjunction with namedWindow and waitKey is used for displaying an image in memory.
 code:
+~~python
 #RGB TO GRAY 
 import cv2
 imgclr=cv2.imread("blue1.jpg",1)
@@ -19,7 +20,7 @@ cv2.imshow('imagecolor',imgclr)
 cv2.imshow('imagecolor1',imggry)
 cv2.imwrite('grayimg.jpg',imggry)
 cv2.waitKey()
-
+~~python
 
 output:
 ![p1](https://user-images.githubusercontent.com/72303060/104428017-f13be380-55a9-11eb-860b-6a90adaf6008.png)
