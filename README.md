@@ -409,6 +409,8 @@ initial_array :  [[1 2 5 3]
  [9 6 1 0]]
 [[1, 2, 5], [4, 5, 4], [9, 6, 1]]
 ## 9.develop a program to implement negative transformation of an image
+The negative transformation is a point processing function which inverts each pixel in an image and is given by s=L-1-r. The Python example applies the negative transformation to an image and displays the output.
+Image is also known as a set of pixels. When we store an image in computers or digitally, it’s corresponding pixel values are stored. So, when we read an image to a variable using OpenCV in Python, the variable stores the pixel values of the image. When we try to negatively transform an image, the brightest areas are transformed into the darkest and the darkest areas are transformed into the brightest.
 ```python
 import cv2
 import numpy as np
@@ -420,8 +422,11 @@ cv2.imshow('image',img)
 cv2.imshow('negative',img_neg)
 cv2.waitKey(0)
 ```
-## 10.Develop a program to implement contrast transformation of an image
+output:
 
+## 10.Develop a program to implement contrast transformation of an image
+Contrast stretching as the name suggests is an image enhancement technique that tries to improve the contrast by stretching the intensity values of an image to fill the entire dynamic range. The transformation function used is always linear and monotonically increasing.
+Contrast is the difference in brightness between objects or regions
 ```python
 import cv2
 image = cv2.imread('a11.jpg')
@@ -432,7 +437,12 @@ cv2.imshow('original', image)
 cv2.imshow('adjusted', adjusted)
 cv2.waitKey()
 ```
+output:
+
 ## 11.Develop a program to implement thresold transformation of an image
+n Image Processing, Thresholding is a kind of Segmentation – it separates pixels into two or more categories.
+In its simplest form, a Thresholding operation of an Image involves classification of the pixels into two groups based on a Threshold:
+Pixels that exceed a given intensity Threshold.Pixels that do not exceed an intensity Threshold and transforming those two kinds of pixels into two colors, say black and white, typically black for the background and the white for the object(s) identified.Using single threshold to separate pixels and mapping them to two colors is also called as Global Thresholding.Thresholding results in finding objects from the background surrounding them.
 ```python
 import cv2  
 import numpy as np  
@@ -443,6 +453,7 @@ cv2.imshow('thresold image', img3)
 cv2.waitKey()
 ```
 ## 12.Develop a program to implement power law transformation of an image
+Power-law (gamma) transformations can be mathematically expressed as s = cr^{\gamma}. Gamma correction is important for displaying images on a screen correctly, to prevent bleaching or darkening of images when viewed from different types of monitors with different display settings. This is done because our eyes perceive images in a gamma-shaped curve, whereas cameras capture images in a linear fashion
 ```python
 import numpy as np
 import cv2
@@ -452,7 +463,6 @@ img = cv2.imread('a11.jpg')
 gamma_1 = np.array(255*(img/255)**2.2,dtype='uint8')
 # Similarly, Apply Gamma=0.4 
 gamma_2 = np.array(255*(img/255)**0.4,dtype='uint8')
-
 gamma_3 = np.array(255*(img/255)**0.2,dtype='uint8')
 gamma_4 = np.array(255*(img/255)**3.2,dtype='uint8')
 # Display the images in subplots
