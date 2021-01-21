@@ -423,6 +423,7 @@ cv2.imshow('negative',img_neg)
 cv2.waitKey(0)
 ```
 output:
+![negtrans](https://user-images.githubusercontent.com/72303060/105331021-fa0b6580-5bf8-11eb-967f-493e0d2c704f.png)
 
 ## 10.Develop a program to implement contrast transformation of an image
 Contrast stretching as the name suggests is an image enhancement technique that tries to improve the contrast by stretching the intensity values of an image to fill the entire dynamic range. The transformation function used is always linear and monotonically increasing.
@@ -438,6 +439,7 @@ cv2.imshow('adjusted', adjusted)
 cv2.waitKey()
 ```
 output:
+![contrsttrans](https://user-images.githubusercontent.com/72303060/105331015-f8da3880-5bf8-11eb-81b5-2715df84471f.png)
 
 ## 11.Develop a program to implement thresold transformation of an image
 n Image Processing, Thresholding is a kind of Segmentation – it separates pixels into two or more categories.
@@ -452,6 +454,9 @@ img3 = cv2.hconcat([image1,thresh1])
 cv2.imshow('thresold image', img3) 
 cv2.waitKey()
 ```
+output:
+![threshtrans](https://user-images.githubusercontent.com/72303060/105331025-fbd52900-5bf8-11eb-8e3b-90eb4aad7679.png)
+
 ## 12.Develop a program to implement power law transformation of an image
 Power-law (gamma) transformations can be mathematically expressed as s = cr^{\gamma}. Gamma correction is important for displaying images on a screen correctly, to prevent bleaching or darkening of images when viewed from different types of monitors with different display settings. This is done because our eyes perceive images in a gamma-shaped curve, whereas cameras capture images in a linear fashion
 ```python
@@ -470,3 +475,6 @@ img3 = cv2.hconcat([gamma_1,gamma_2,gamma_3,gamma_4])
 cv2.imshow('power law trans',img3)
 cv2.waitKey(0)
 ```
+output:
+![powerlawtrans](https://user-images.githubusercontent.com/72303060/105331022-fb3c9280-5bf8-11eb-97c2-0340ac92cae3.png)
+
