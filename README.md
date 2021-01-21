@@ -390,7 +390,7 @@ mul is
  10     5
  20     10
 ```
-## 7.Write a program to find the neighbour values in a matrix.
+## 8.Write a program to find the neighbour values in a matrix.
 The adjacent elements of matrix can be top, down, left, right, diagonal or anti diagonal. The four or more numbers should be adjacent to each other.
 8-connected pixels are neighbors to every pixel that touches one of their edges or corners. These pixels are connected horizontally, vertically, and diagonally. In addition to 4-connected pixels, each pixel with coordinates {\displaystyle \textstyle (x\pm 1,y\pm 1)}\textstyle(x\pm1,y\pm1) is connected to the pixel at {\displaystyle \textstyle (x,y)}\textstyle(x,y).
 ```python
@@ -402,4 +402,61 @@ def neighbors(radius, rowNumber, columnNumber):
             for j in range(columnNumber-1-radius, columnNumber+radius)]
            for i in range(rowNumber-1-radius, rowNumber+radius)]
 neighbors(1, 2, 2)
+```
+output:
+initial_array :  [[1 2 5 3]
+ [4 5 4 7]
+ [9 6 1 0]]
+[[1, 2, 5], [4, 5, 4], [9, 6, 1]]
+## 9.develop a program to implement negative transformation of an image
+```python
+import cv2
+import numpy as np
+# Load the image
+img = cv2.imread('a21.jpg')
+img_neg = 255 - img
+# Show the image
+cv2.imshow('image',img)
+cv2.imshow('negative',img_neg)
+cv2.waitKey(0)
+```
+## 10.Develop a program to implement contrast transformation of an image
+
+```python
+import cv2
+image = cv2.imread('a11.jpg')
+alpha = 1.2# Contrast control (1.0-3.0)
+beta = 20.0# Brightness control (0-100)
+adjusted = cv2.convertScaleAbs(image, alpha=alpha, beta=beta)
+cv2.imshow('original', image)
+cv2.imshow('adjusted', adjusted)
+cv2.waitKey()
+```
+## 11.Develop a program to implement thresold transformation of an image
+```python
+import cv2  
+import numpy as np  
+image1 = cv2.imread('a11.jpg')  
+ret, thresh1 = cv2.threshold(image1, 120, 255, cv2.THRESH_TOZERO) 
+img3 = cv2.hconcat([image1,thresh1])
+cv2.imshow('thresold image', img3) 
+cv2.waitKey()
+```
+## 12.Develop a program to implement power law transformation of an image
+```python
+import numpy as np
+import cv2
+# Load the image
+img = cv2.imread('a11.jpg')
+# Apply Gamma=2.2 on the normalised image and then multiply by scaling constant (For 8 bit, c=255)
+gamma_1 = np.array(255*(img/255)**2.2,dtype='uint8')
+# Similarly, Apply Gamma=0.4 
+gamma_2 = np.array(255*(img/255)**0.4,dtype='uint8')
+
+gamma_3 = np.array(255*(img/255)**0.2,dtype='uint8')
+gamma_4 = np.array(255*(img/255)**3.2,dtype='uint8')
+# Display the images in subplots
+img3 = cv2.hconcat([gamma_1,gamma_2,gamma_3,gamma_4])
+cv2.imshow('power law trans',img3)
+cv2.waitKey(0)
 ```
