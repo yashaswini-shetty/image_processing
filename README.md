@@ -390,3 +390,16 @@ mul is
  10     5
  20     10
 ```
+## 7.Write a program to find the neighbour values in a matrix.
+The adjacent elements of matrix can be top, down, left, right, diagonal or anti diagonal. The four or more numbers should be adjacent to each other.
+8-connected pixels are neighbors to every pixel that touches one of their edges or corners. These pixels are connected horizontally, vertically, and diagonally. In addition to 4-connected pixels, each pixel with coordinates {\displaystyle \textstyle (x\pm 1,y\pm 1)}\textstyle(x\pm1,y\pm1) is connected to the pixel at {\displaystyle \textstyle (x,y)}\textstyle(x,y).
+```python
+import numpy as np
+ini_array = np.array([[1, 2,5, 3], [4,5, 4, 7], [9, 6, 1,0]])
+print("initial_array : ", str(ini_array));
+def neighbors(radius, rowNumber, columnNumber):
+    return[[ini_array[i][j]if i >= 0 and i < len(ini_array) and j >= 0 and j < len(ini_array[0]) else 0
+            for j in range(columnNumber-1-radius, columnNumber+radius)]
+           for i in range(rowNumber-1-radius, rowNumber+radius)]
+neighbors(1, 2, 2)
+```
